@@ -1,2 +1,2 @@
-## Functions
-s
+package main
+func main() {
