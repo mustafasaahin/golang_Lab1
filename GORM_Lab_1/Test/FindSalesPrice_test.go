@@ -20,7 +20,7 @@ func TestFinsSalesPrice(t *testing.T) {
 	config.DB.Where("code = ?", productCode).
 		First(&product)
 
-	var salesPrices []models.SalesPrices
+	var salesPrices []models.SalesPrice
 	config.DB.Where("customer_id = ? and product_id = ?", customer.ID, product.ID).
 		Find(&salesPrices)
 

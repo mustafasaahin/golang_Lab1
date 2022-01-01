@@ -5,6 +5,8 @@ import (
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 	"log"
+	"net"
+	"strings"
 )
 
 var (
@@ -29,4 +31,15 @@ func InitDB() {
 	} else {
 		log.Println("DB Connected")
 	}
+}
+
+func GetOutboundIP() string {
+	conn, err := net.Dial("udp", "8.8.8.8:80")
+	if err != nil {
+		log.Println("GetOutboundIP", err)
+	}
+	defer conn.Close()
+	localAddr := conn.LocalAddr().String()
+	idx := strings.LastIndex(localAddr, ":")
+	return localAddr[0:idx]
 }

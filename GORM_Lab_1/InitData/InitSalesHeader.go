@@ -48,7 +48,7 @@ func InitSalesHeader() {
 	config.DB.
 		Where("code = ?", "PLS002").
 		First(&product)
-	var salesPrices []models.SalesPrices
+	var salesPrices []models.SalesPrice
 	config.DB.Debug().Where("customer_id = ? and product_id = ?", customer.ID, product.ID).
 		Find(&salesPrices)
 
@@ -83,7 +83,7 @@ func InitSalesHeader() {
 	config.DB.
 		Where("code = ?", "DLT001").
 		First(&product)
-	salesPrices = []models.SalesPrices{}
+	salesPrices = []models.SalesPrice{}
 	config.DB.Debug().Where("customer_id = ? and product_id = ?", customer.ID, product.ID).
 		Find(&salesPrices)
 

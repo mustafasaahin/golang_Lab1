@@ -24,7 +24,7 @@ func InitSalesPrice() {
 		Where("code = ?", "PLS001").
 		First(&product)
 
-	salesPrice := models.SalesPrices{
+	salesPrice := models.SalesPrice{
 		CustomerID:      customer.ID,
 		CustomerNo:      customer.No,
 		CustomerName:    customer.Name,
@@ -45,7 +45,7 @@ func InitSalesPrice() {
 		Where("code = ?", "PLS002").
 		First(&product)
 
-	salesPrice = models.SalesPrices{
+	salesPrice = models.SalesPrice{
 		CustomerID:      customer.ID,
 		CustomerNo:      customer.No,
 		CustomerName:    customer.Name,
@@ -66,7 +66,7 @@ func InitSalesPrice() {
 		Where("code = ?", "PLS003").
 		First(&product)
 
-	salesPrice = models.SalesPrices{
+	salesPrice = models.SalesPrice{
 		CustomerID:      customer.ID,
 		CustomerNo:      customer.No,
 		CustomerName:    customer.Name,
@@ -87,7 +87,7 @@ func InitSalesPrice() {
 		Where("code = ?", "DLT001").
 		First(&product)
 
-	salesPrice = models.SalesPrices{
+	salesPrice = models.SalesPrice{
 		CustomerID:      customer.ID,
 		CustomerNo:      customer.No,
 		CustomerName:    customer.Name,
@@ -108,7 +108,7 @@ func InitSalesPrice() {
 		Where("code = ?", "DLT002").
 		First(&product)
 
-	salesPrice = models.SalesPrices{
+	salesPrice = models.SalesPrice{
 		CustomerID:      customer.ID,
 		CustomerNo:      customer.No,
 		CustomerName:    customer.Name,
@@ -129,7 +129,7 @@ func InitSalesPrice() {
 		Where("code = ?", "TES002").
 		First(&product)
 
-	salesPrice = models.SalesPrices{
+	salesPrice = models.SalesPrice{
 		CustomerID:      customer.ID,
 		CustomerNo:      customer.No,
 		CustomerName:    customer.Name,
@@ -156,7 +156,7 @@ func InitSalesPrice() {
 		Where("code = ?", "PLS001").
 		First(&product)
 
-	salesPrice = models.SalesPrices{
+	salesPrice = models.SalesPrice{
 		CustomerID:      customer.ID,
 		CustomerNo:      customer.No,
 		CustomerName:    customer.Name,
@@ -177,7 +177,7 @@ func InitSalesPrice() {
 		Where("code = ?", "PLS002").
 		First(&product)
 
-	salesPrice = models.SalesPrices{
+	salesPrice = models.SalesPrice{
 		CustomerID:      customer.ID,
 		CustomerNo:      customer.No,
 		CustomerName:    customer.Name,
@@ -198,7 +198,7 @@ func InitSalesPrice() {
 		Where("code = ?", "PLS003").
 		First(&product)
 
-	salesPrice = models.SalesPrices{
+	salesPrice = models.SalesPrice{
 		CustomerID:      customer.ID,
 		CustomerNo:      customer.No,
 		CustomerName:    customer.Name,
@@ -219,7 +219,7 @@ func InitSalesPrice() {
 		Where("code = ?", "DLT001").
 		First(&product)
 
-	salesPrice = models.SalesPrices{
+	salesPrice = models.SalesPrice{
 		CustomerID:      customer.ID,
 		CustomerNo:      customer.No,
 		CustomerName:    customer.Name,
@@ -240,7 +240,7 @@ func InitSalesPrice() {
 		Where("code = ?", "DLT002").
 		First(&product)
 
-	salesPrice = models.SalesPrices{
+	salesPrice = models.SalesPrice{
 		CustomerID:      customer.ID,
 		CustomerNo:      customer.No,
 		CustomerName:    customer.Name,
@@ -261,7 +261,7 @@ func InitSalesPrice() {
 		Where("code = ?", "TES002").
 		First(&product)
 
-	salesPrice = models.SalesPrices{
+	salesPrice = models.SalesPrice{
 		CustomerID:      customer.ID,
 		CustomerNo:      customer.No,
 		CustomerName:    customer.Name,
@@ -288,7 +288,7 @@ func InitSalesPrice() {
 		Where("code = ?", "PLS001").
 		First(&product)
 
-	salesPrice = models.SalesPrices{
+	salesPrice = models.SalesPrice{
 		CustomerID:      customer.ID,
 		CustomerNo:      customer.No,
 		CustomerName:    customer.Name,
@@ -309,7 +309,7 @@ func InitSalesPrice() {
 		Where("code = ?", "PLS002").
 		First(&product)
 
-	salesPrice = models.SalesPrices{
+	salesPrice = models.SalesPrice{
 		CustomerID:      customer.ID,
 		CustomerNo:      customer.No,
 		CustomerName:    customer.Name,
@@ -330,7 +330,7 @@ func InitSalesPrice() {
 		Where("code = ?", "PLS003").
 		First(&product)
 
-	salesPrice = models.SalesPrices{
+	salesPrice = models.SalesPrice{
 		CustomerID:      customer.ID,
 		CustomerNo:      customer.No,
 		CustomerName:    customer.Name,
@@ -351,7 +351,7 @@ func InitSalesPrice() {
 		Where("code = ?", "DLT001").
 		First(&product)
 
-	salesPrice = models.SalesPrices{
+	salesPrice = models.SalesPrice{
 		CustomerID:      customer.ID,
 		CustomerNo:      customer.No,
 		CustomerName:    customer.Name,
@@ -372,7 +372,7 @@ func InitSalesPrice() {
 		Where("code = ?", "DLT002").
 		First(&product)
 
-	salesPrice = models.SalesPrices{
+	salesPrice = models.SalesPrice{
 		CustomerID:      customer.ID,
 		CustomerNo:      customer.No,
 		CustomerName:    customer.Name,
@@ -393,7 +393,7 @@ func InitSalesPrice() {
 		Where("code = ?", "TES002").
 		First(&product)
 
-	salesPrice = models.SalesPrices{
+	salesPrice = models.SalesPrice{
 		CustomerID:      customer.ID,
 		CustomerNo:      customer.No,
 		CustomerName:    customer.Name,
@@ -420,7 +420,7 @@ func InitSalesPrice() {
 		Where("code = ?", "PLS001").
 		First(&product)
 
-	salesPrice = models.SalesPrices{
+	salesPrice = models.SalesPrice{
 		CustomerID:      customer.ID,
 		CustomerNo:      customer.No,
 		CustomerName:    customer.Name,
@@ -441,7 +441,7 @@ func InitSalesPrice() {
 		Where("code = ?", "PLS002").
 		First(&product)
 
-	salesPrice = models.SalesPrices{
+	salesPrice = models.SalesPrice{
 		CustomerID:      customer.ID,
 		CustomerNo:      customer.No,
 		CustomerName:    customer.Name,
@@ -462,7 +462,7 @@ func InitSalesPrice() {
 		Where("code = ?", "PLS003").
 		First(&product)
 
-	salesPrice = models.SalesPrices{
+	salesPrice = models.SalesPrice{
 		CustomerID:      customer.ID,
 		CustomerNo:      customer.No,
 		CustomerName:    customer.Name,
@@ -483,7 +483,7 @@ func InitSalesPrice() {
 		Where("code = ?", "DLT001").
 		First(&product)
 
-	salesPrice = models.SalesPrices{
+	salesPrice = models.SalesPrice{
 		CustomerID:      customer.ID,
 		CustomerNo:      customer.No,
 		CustomerName:    customer.Name,
@@ -504,7 +504,7 @@ func InitSalesPrice() {
 		Where("code = ?", "DLT002").
 		First(&product)
 
-	salesPrice = models.SalesPrices{
+	salesPrice = models.SalesPrice{
 		CustomerID:      customer.ID,
 		CustomerNo:      customer.No,
 		CustomerName:    customer.Name,
@@ -525,7 +525,7 @@ func InitSalesPrice() {
 		Where("code = ?", "TES002").
 		First(&product)
 
-	salesPrice = models.SalesPrices{
+	salesPrice = models.SalesPrice{
 		CustomerID:      customer.ID,
 		CustomerNo:      customer.No,
 		CustomerName:    customer.Name,

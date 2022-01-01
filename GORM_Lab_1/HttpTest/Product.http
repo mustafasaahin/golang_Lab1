@@ -1,0 +1,53 @@
+DELETE http://192.168.1.128:8014/api/product/7
+Accept: application/json
+
+###
+PUT http://192.168.1.128:8014/api/product/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "code": "PLS001",
+  "name": "Plus Banyo Bataryası",
+  "brand": "Artı",
+  "item_category": "Mix Bataryalar",
+  "item_sub_category": "Plus Serisi",
+  "origin": "Türkiye",
+  "weight": 0,
+  "base_unit_of_measure": "ADET",
+  "url": "http://www.artiarmatur.com/details/116/plus-banyo-bataryasi",
+  "picture_url": "http://www.artiarmatur.com/images/product/7e725dbd-e809-.jpg",
+  "unit_price": 250,
+  "vat": 18,
+  "currency_code": "TL"
+}
+
+###
+POST http://192.168.1.128:8014/api/product
+Content-Type: application/json
+
+{
+  "code": "TES004",
+  "name": "Osmanlı Musluğu Acem Usulü",
+  "brand": "Artı",
+  "item_category": "Tesisat",
+  "item_sub_category": "Musluklar",
+  "origin": "Türkiye",
+  "weight": 0,
+  "base_unit_of_measure": "ADET",
+  "url": "http://www.artiarmatur.com/details/1276/osmanli-muslugu-tugrali",
+  "picture_url": "http://www.artiarmatur.com/images/product/b9487d42-37ce-.jpg",
+  "unit_price": 240,
+  "vat": 18,
+  "currency_code": "TL"
+}
+
+###
+GET http://192.168.1.128:8014/api/product/2
+Accept: application/json
+
+###
+GET http://192.168.1.128:8014/api/products
+Accept: application/json
+
+###

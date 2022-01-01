@@ -4,7 +4,7 @@ import (
 	"time"
 )
 
-type SalesPrices struct {
+type SalesPrice struct {
 	ID              uint64    `json:"id" gorm:"primaryKey"`
 	CustomerID      uint64    `json:"customer_id" gorm:"comment: Müşteri id"`
 	CustomerNo      string    `json:"customer_no" gorm:"comment:Müşteri No"`

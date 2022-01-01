@@ -14,7 +14,7 @@ func InitRecords() {
 		models.Product{},
 		models.SalesLine{},
 		models.SalesHeader{},
-		models.SalesPrices{},
+		models.SalesPrice{},
 	); err != nil {
 		fmt.Println(err.Error())
 	}
@@ -25,7 +25,7 @@ func InitRecords() {
 		models.Product{},
 		models.SalesLine{},
 		models.SalesHeader{},
-		models.SalesPrices{}); err != nil {
+		models.SalesPrice{}); err != nil {
 		fmt.Println(err.Error())
 	}
 	InitData.InitCustomer()
