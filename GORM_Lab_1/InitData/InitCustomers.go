@@ -25,9 +25,9 @@ func InitCustomer() {
 		PaymentTerm:     1,
 		CurrencyCode:    "Tl",
 		Address:         "Yeşilpınar Mah Canan Sokak No 106 Eyüp/Istanbul",
-		City:            "Ankara",
+		City:            "Istanbul",
 		Country:         "Turkey",
-		TaxAreaCode:     "Çankaya",
+		TaxAreaCode:     "Eyüp",
 		TaxNo:           "634789",
 		TradeRegisterNo: "552637",
 	}
@@ -215,9 +215,9 @@ func InitCustomer() {
 		PaymentTerm:     1,
 		CurrencyCode:    "Tl",
 		Address:         "Yeşilpınar Mah Begonya Sokak No 21 Eyüp/Istanbul",
-		City:            "Izmir",
+		City:            "Istanbul",
 		Country:         "Turkey",
-		TaxAreaCode:     "Alsancak",
+		TaxAreaCode:     "Eyüp",
 		TaxNo:           "6347439",
 		TradeRegisterNo: "235268",
 	}

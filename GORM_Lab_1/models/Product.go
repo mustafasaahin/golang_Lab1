@@ -13,5 +13,6 @@ type Product struct {
 	Url               string  `json:"url" gorm:"comment:Ürün web adresi"`
 	PictureUrl        string  `json:"picture_url" gorm:"comment: Resim Adresi"`
 	UnitPrice         float64 `json:"unit_price" gorm:"comment:Ürün Fiyatı"`
+	VAT               float64 `json:"vat" gorm:"comment:KDV Oranı"`
 	CurrencyCode      string  `json:"currency_code" gorm:"comment:Döviz Kodu: Örneğin USD,EUR yazılabilir."`
 }
