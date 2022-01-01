@@ -26,7 +26,7 @@ func main() {
 	//InsertCarSample()
 	//DeleteCar()
 	InitData.InitCustomer()
-	//InitData.InitProduct()
+	InitData.InitProduct()
 }
 func ListBooks() {
 	var books []models.Book
