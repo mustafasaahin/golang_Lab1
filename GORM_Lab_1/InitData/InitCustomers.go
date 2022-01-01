@@ -16,6 +16,7 @@ func InitCustomer() {
 		Delete(&models.Contact{})
 
 	var customer = models.Customer{
+		No:              "MUS001",
 		Name:            "Seyisoğlu",
 		ContactName:     "Ayhan Şahin",
 		Phone:           "532 377 3480",
@@ -70,6 +71,7 @@ func InitCustomer() {
 	config.DB.Create(&contact)
 
 	customer = models.Customer{
+		No:              "MUS002",
 		Name:            "Artı Armatur",
 		ContactName:     "Hakan Şahin",
 		Phone:           "532 535 4909",
@@ -137,6 +139,7 @@ func InitCustomer() {
 	config.DB.Create(&contact)
 
 	customer = models.Customer{
+		No:              "MUS003",
 		Name:            "Akın İnşaat",
 		ContactName:     "Süleyman CİGAL",
 		Phone:           "532 327 2327",
@@ -203,6 +206,7 @@ func InitCustomer() {
 	config.DB.Create(&contact)
 
 	customer = models.Customer{
+		No:              "MUS004",
 		Name:            "ŞenPres LTD ŞTİ",
 		ContactName:     "Sedat Şahin",
 		Phone:           "537 237 6238",

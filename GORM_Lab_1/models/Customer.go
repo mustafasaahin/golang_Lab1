@@ -2,6 +2,7 @@ package models
 
 type Customer struct {
 	ID                 uint64 `json:"id" gorm:"primaryKey"`
+	No                 string `json:"no" gorm:"comment:Müşteri No"`
 	Name               string `json:"name" gorm:"comment:Müşterinin adi"`
 	ContactName        string `json:"contact_name" gorm:"comment:İlgili kişi"`
 	Phone              string `json:"phone" gorm:"comment:Müşterinin telefonu"`
