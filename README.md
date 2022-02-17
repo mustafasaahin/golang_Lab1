@@ -2,3 +2,4 @@
 
 - gorm çalışması
 - gin gonic çalışmsı
+- test
