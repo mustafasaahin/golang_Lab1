@@ -2,9 +2,9 @@ package Test
 
 import (
 	"fmt"
-	"github.com/mustafasaahin/golang_lab1/GORM_Lab_1/SalesPriceManagement"
-	"github.com/mustafasaahin/golang_lab1/GORM_Lab_1/config"
-	"github.com/mustafasaahin/golang_lab1/GORM_Lab_1/models"
+	"github.com/mustafasaahin/golang_Lab1/GORM_Lab_1/SalesPriceManagement"
+	"github.com/mustafasaahin/golang_Lab1/GORM_Lab_1/config"
+	"github.com/mustafasaahin/golang_Lab1/GORM_Lab_1/models"
 	"testing"
 )
 

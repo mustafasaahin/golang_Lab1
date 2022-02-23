@@ -1,5 +1,9 @@
 package models
 
+// Dev : Mustafa ŞAHİN
+// Date 23.02.2022
+// Description : musteriler
+
 type Customer struct {
 	ID                 uint64    `json:"id" gorm:"primaryKey"`
 	No                 string    `json:"no" gorm:"comment:Müşteri No"`

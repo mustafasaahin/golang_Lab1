@@ -2,8 +2,8 @@ package InitData
 
 import (
 	"fmt"
-	"github.com/mustafasaahin/golang_lab1/GORM_Lab_1/config"
-	"github.com/mustafasaahin/golang_lab1/GORM_Lab_1/models"
+	"github.com/mustafasaahin/golang_Lab1/GORM_Lab_1/config"
+	"github.com/mustafasaahin/golang_Lab1/GORM_Lab_1/models"
 	"math"
 	"time"
 )
@@ -213,7 +213,6 @@ func InitSalesPrice() {
 		EndDate:         time.Date(2022, 12, 31, 0, 0, 0, 0, time.UTC),
 	}
 	config.DB.Create(&salesPrice)
-
 	product = models.Product{}
 	config.DB.
 		Where("code = ?", "DLT001").

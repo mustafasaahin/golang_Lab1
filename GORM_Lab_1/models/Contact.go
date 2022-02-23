@@ -1,5 +1,6 @@
 package models
 
+//yetkili kişiler
 type Contact struct {
 	ID           uint64 `json:"id" gorm:"primaryKey"`
 	CustomerID   uint64 `json:"customer_id" gorm:"comment:Müşteri ID"`
