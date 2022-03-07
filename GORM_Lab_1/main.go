@@ -19,6 +19,7 @@ func main() {
 	apiroots.SalesLineApiRoot(api)
 	apiroots.SalesPricesApiRoot(api)
 	apiroots.CustomerApiRoot(api)
+	apiroots.UserApiRoot(api)
 
 	app.GET("/ping", func(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{

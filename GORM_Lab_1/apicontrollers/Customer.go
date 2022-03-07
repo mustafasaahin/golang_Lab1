@@ -11,26 +11,27 @@ import (
 
 //GETCustomers: Müşteri listesini veren api controller
 func GETCustomers(c *gin.Context) {
-	var customers []models.Customer
+	var customer []models.Customer
 	if err := config.DB.
-		Preload("Contacts").
-		Find(&customers).Error; err != nil {
-		c.JSON(http.StatusBadRequest, err.Error())
+		Preload("Contact").
+		Find(&customer).Error; err != nil {
+		c.JSON(http.StatusBadRequest, customer)
+		return
 	} else {
-		c.JSON(http.StatusOK, customers)
+		c.JSON(http.StatusOK, customer)
 		return
 	}
 }
 func GETCustomerByID(c *gin.Context) {
 	id := c.Params.ByName("id")
 	var customer models.Customer
-	if err := config.DB.Where("id =?", id).First(&customer).Error; errors.Is(err, gorm.ErrRecordNotFound) {
+	if err := config.DB.Where("id =?", id).
+		First(&customer).Error; errors.Is(err, gorm.ErrRecordNotFound) {
 		c.JSON(http.StatusNotFound, err.Error())
 		return
 	}
 	c.JSON(http.StatusOK, customer)
 }
-
 func POSTCustomer(c *gin.Context) {
 	var customer models.Customer
 	if err := c.Bind(&customer); err != nil {
@@ -49,7 +50,6 @@ func PUTCustomer(c *gin.Context) {
 	var customer models.Customer
 	id := c.Params.ByName("id")
 	config.DB.
-		Preload("Customer").
 		Where("id=?", id).
 		First(&customer)
 	if err := config.DB.Where("id = ?", id).First(&customer).Error; err != nil {
@@ -75,10 +75,8 @@ func DELETECustomer(c *gin.Context) {
 	var salesheader models.SalesHeader
 	id := c.Params.ByName("id")
 	config.DB.
-		Preload("Customer").
 		Where("id=?", id).
 		First(&customer)
-
 	if err := config.DB.Where("id = ?", id).First(&customer).Error; err != nil {
 		if errors.Is(err, gorm.ErrRecordNotFound) {
 			c.JSON(http.StatusNotFound, err.Error())
@@ -109,11 +107,9 @@ func DELETECustomer(c *gin.Context) {
 		if err := config.DB.Where("id=?", customer.ID).Delete(&customer).Error; err != nil {
 			c.JSON(http.StatusBadRequest, err.Error())
 			return
-
 		} else {
 			c.JSON(http.StatusOK, "Done")
 		}
-
 		/*	if err := config.DB.Where("customer_id = ?", customer.ID).Delete(&contact).Error; err != nil {
 				c.JSON(http.StatusNotFound, err.Error())
 				return

@@ -23,10 +23,8 @@ func GETProducts(c *gin.Context) {
 		Preload("SalesPrices").
 		Where(filter).
 		Find(&products)
-
 	c.JSON(http.StatusOK, products)
 }
-
 func GETProductByID(c *gin.Context) {
 	id := c.Params.ByName("id")
 	var product models.Product

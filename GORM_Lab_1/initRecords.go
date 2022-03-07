@@ -15,21 +15,24 @@ func InitRecords() {
 		models.SalesLine{},
 		models.SalesHeader{},
 		models.SalesPrice{},
+		models.User{},
 	); err != nil {
 		fmt.Println(err.Error())
 	}
-
 	if err := config.DB.AutoMigrate(
 		models.Customer{},
 		models.Contact{},
 		models.Product{},
 		models.SalesLine{},
 		models.SalesHeader{},
-		models.SalesPrice{}); err != nil {
+		models.SalesPrice{},
+		models.User{}); err != nil {
 		fmt.Println(err.Error())
 	}
+
 	InitData.InitCustomer()
 	InitData.InitProduct()
 	InitData.InitSalesPrice()
 	InitData.InitSalesHeader()
+	InitData.InitUser()
 }
