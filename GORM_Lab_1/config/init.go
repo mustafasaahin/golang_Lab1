@@ -16,8 +16,8 @@ var (
 	appDBUserName       = "postgres"
 	appDBUserPassword   = "31298"
 	DB                  *gorm.DB
-	TokenExpireDuration = time.Hour * 3
-	MySecretKey         = "28mus06ta20fa"
+	TokenExpireDuration = time.Hour * 1
+	MySecretKey         = "mus28ta06fa20"
 )
 
 func InitDB() {
@@ -26,7 +26,6 @@ func InitDB() {
 		appDBUserName,
 		appDBUserPassword,
 		appDBName)
-
 	var err error
 	DB, err = gorm.Open(postgres.Open(cnnString), &gorm.Config{})
 	if err != nil {
@@ -35,7 +34,6 @@ func InitDB() {
 		log.Println("DB Connected")
 	}
 }
-
 func GetOutboundIP() string {
 	conn, err := net.Dial("udp", "8.8.8.8:80")
 	if err != nil {

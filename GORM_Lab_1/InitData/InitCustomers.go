@@ -33,7 +33,6 @@ func InitCustomer() {
 	}
 	config.DB.Create(&customer)
 	fmt.Println(customer.ID)
-
 	contact := models.Contact{
 		CustomerID:   customer.ID,
 		CustomerName: customer.Name,

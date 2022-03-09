@@ -36,7 +36,7 @@ func POSTLogin(c *gin.Context) {
 		c.JSON(http.StatusBadRequest, err.Error())
 		return
 	}
-	fmt.Println(form.Username, form.Password)
+	fmt.Println(form.Username, config.HashPassword(form.Password))
 	var user models.User
 	if err := config.DB.Debug().Where("mail=? and password=?", form.Username,
 		config.HashPassword(form.Password)).First(&user).Error; err != nil {
@@ -53,9 +53,10 @@ func POSTLogin(c *gin.Context) {
 			"user":    user,
 			"token":   token,
 			"exp":     exp,
-			"name":    user.Name,
-			"surname": user.Surname,
-			"phone":   user.Phone,
+			"ID":      user.ID,
+			"Name":    user.Name,
+			"Surname": user.Surname,
+			"Phone":   user.Phone,
 		})
 		return
 	}

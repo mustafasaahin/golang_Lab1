@@ -2,8 +2,10 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
+	"github.com/mustafasaahin/golang_Lab1/GORM_Lab_1/apicontrollers"
 	"github.com/mustafasaahin/golang_Lab1/GORM_Lab_1/apiroots"
 	"github.com/mustafasaahin/golang_Lab1/GORM_Lab_1/config"
+	"github.com/mustafasaahin/golang_Lab1/GORM_Lab_1/libs"
 	"net/http"
 )
 
@@ -12,7 +14,7 @@ func main() {
 	InitRecords()
 
 	app := gin.Default()
-	api := app.Group("/api")
+	api := app.Group("/api", libs.BiletKontrol)
 	apiroots.ContactApiRoot(api)
 	apiroots.ProductApiRoot(api)
 	apiroots.SalesHeaderApiRoot(api)
@@ -27,5 +29,8 @@ func main() {
 			"duduk":   "findı",
 		})
 	})
+	app.POST("/register", apicontrollers.POSTRegister)
+	app.POST("/login", apicontrollers.POSTLogin)
+
 	app.Run(config.GetOutboundIP() + ":8014")
 }
